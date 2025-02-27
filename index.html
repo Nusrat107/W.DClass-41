@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class-41</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <form action="" method="" onsubmit="calculateGrade()">
+    <div class="container">
+        <img src="bd_logo.jpg" alt="">
+        <h2>JSC/SSC/HSC Result Check</h2>
+        <label>Examination:</label>
+        <select id="" required>
+            <option>SSC/Dakhil/Equivalent</option>
+            <option value="in-dhaka">JSC/JDC</option>
+            <option value="out-dhaka">SSC/DAKHIL</option>
+            <option value="out-dhaka">SSC(Vocational)</option>
+            <option value="out-dhaka">HSC/Alim</option>
+            <option value="out-dhaka">HSC(Vocational)</option>
+            <option value="out-dhaka">HSC(BM)</option>
+            <option value="out-dhaka">Diploma in commarce</option>
+            <option value="out-dhaka">Diploma in Business studies</option>
+        </select>
+        
+        <label>Year:</label>
+        <select id="year" required>
+            <option value="">Select One</option>
+            <script>
+                for(let i = 2025; i >= 2000; i--) {
+                    document.write(`<option value="${i}">${i}</option>`);
+                }
+            </script>
+        </select>
+        
+        <label>Board:</label>
+        <select id="board" required>
+            <option value="">Select One</option>
+            <option value="dhaka">Dhaka</option>
+            <option value="chittagong">Chittagong</option>
+            <option value="rajshahi">Rajshahi</option>
+            <option value="sylhet">Sylhet</option>
+            <option value="sylhet">Cumilla</option>
+            <option value="sylhet">Dinajpur</option>
+        </select>
+        
+        <label>Roll:</label>
+        <input type="number" id="roll" placeholder="Enter Roll Number" required>
+        
+        <label>Reg No:</label>
+        <input type="number" id="reg" placeholder="Enter Registration Number" required>
+
+        <label>Grade</label>
+        <input type="number" value="" id="marks" name="" placeholder="Enter Marks" required>
+        <input  type="submit" value="Calculate"><br>
+        
+        <label>3 + 8 = ?</label>
+        <input type="number" id="captcha" placeholder="Answer">
+        
+        <button onclick="checkResult()">Reset</button>
+        <button onclick="checkResult()">Submit</button>
+        
+        <p id="result" style="color: red; margin-top: 10px;"></p>
+        <img src="tbl_logo.jpg" alt="">
+    </div>
+
+    </form>
+
+    <script src="script.js"></script>
+</body>
+</html>
