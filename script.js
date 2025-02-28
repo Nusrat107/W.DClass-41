@@ -1,4 +1,8 @@
-function checkResult() {
+function checkResult()
+
+{
+
+
     let roll = document.getElementById("roll").value;
     let reg = document.getElementById("reg").value;
     let captcha = document.getElementById("captcha").value;
@@ -8,7 +12,11 @@ function checkResult() {
     } else {
         document.getElementById("result").innerText = "Fetching result... (Demo)";
     }
+
+   
 }
+
+document.getElementById('marks').value = "";
 
 
 function calculateGrade()
